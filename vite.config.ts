@@ -1,0 +1,14 @@
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [react()],
+  server: {
+    host: '0.0.0.0', // Permite acesso de qualquer IP na rede
+    port: 5173,
+    strictPort: false, // Se a porta estiver ocupada, tenta outra
+    open: false // Não abre automaticamente (o .bat faz isso)
+  }
+})
+
